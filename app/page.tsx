@@ -2,7 +2,7 @@ import { Button } from "@nextui-org/react";
 import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image, } from "@nextui-org/react";
 import { SiDotnet, SiTypescript, SiNextdotjs } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
-import { FaPython, FaJava, FaPhp, FaReact } from "react-icons/fa";
+import { FaPython, FaJava, FaPhp, FaReact, FaPenFancy , FaDna } from "react-icons/fa";
 import { FaGolang, FaComputer } from "react-icons/fa6";
 import { PiFileSqlThin } from "react-icons/pi";
 import TechnicalSkillsPopover from "./ui/popovers/technicalSkillsPopover"
@@ -57,59 +57,51 @@ export default function Home() {
         </Card>
         <Card className="col-span-2">
           <CardHeader className="flex gap-3">
-            <Image
-              alt="nextui logo"
-              height={40}
-              radius="sm"
-              src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-              width={40}
-            />
+            <FaPenFancy size={40}/>
             <div className="flex flex-col">
-              <p className="text-md">NextUI</p>
-              <p className="text-small text-default-500">nextui.org</p>
+              <p className="text-md">Handwriter</p>
+              <p className="text-small text-default-500">2018 - </p>
             </div>
           </CardHeader>
           <Divider />
           <CardBody>
-            <p>Make beautiful websites regardless of your design experience.</p>
+            <p>Handwriting Analysis Suite: R package and Web Application</p>
           </CardBody>
           <Divider />
           <CardFooter>
             <Link
               isExternal
               showAnchorIcon
-              href="https://github.com/nextui-org/nextui"
+              href="https://github.com/CSAFE-ISU/handwriter"
             >
-              Visit source code on GitHub.
+              R Package
             </Link>
+            <Link
+              isExternal
+              showAnchorIcon
+              href="https://github.com/b-esc/Handwriter-Web"
+              >Web Application</Link>
           </CardFooter>
         </Card>
         <Card className="col-span-2">
           <CardHeader className="flex gap-3">
-            <Image
-              alt="nextui logo"
-              height={40}
-              radius="sm"
-              src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-              width={40}
-            />
+            <FaDna size={40}/>
             <div className="flex flex-col">
-              <p className="text-md">NextUI</p>
-              <p className="text-small text-default-500">nextui.org</p>
+              <p className="text-md">Gene Network Visualizer</p>
             </div>
           </CardHeader>
           <Divider />
           <CardBody>
-            <p>Make beautiful websites regardless of your design experience.</p>
+            <p>Web application visualizing relationships between genes and their descriptions.</p>
           </CardBody>
           <Divider />
           <CardFooter>
             <Link
               isExternal
               showAnchorIcon
-              href="https://github.com/nextui-org/nextui"
+              href="https://github.com/b-esc/Gene-Network-Visualizer"
             >
-              Visit source code on GitHub.
+              Source
             </Link>
           </CardFooter>
         </Card>
