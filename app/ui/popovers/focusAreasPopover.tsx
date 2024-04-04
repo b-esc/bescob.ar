@@ -9,8 +9,8 @@ export default function FocusAreasPopover() {
             </PopoverTrigger>
             <PopoverContent>
                 <div className="px-1 py-2">
-                    <div className="text-small font-bold">Technical Skills</div>
-                    <div className="text-tiny"><ul>
+                    <div className="text-base font-bold">Technical Skills</div>
+                    <div className="text-sm"><ul>
                         <li>• Software Engineering</li>
                         <ul>
                             <li>• Product</li>

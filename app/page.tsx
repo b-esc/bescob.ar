@@ -5,9 +5,10 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { FaPython, FaJava, FaPhp, FaReact } from "react-icons/fa";
 import { FaGolang, FaComputer } from "react-icons/fa6";
 import { PiFileSqlThin } from "react-icons/pi";
-import TechnicalSkillsPopover from "./ui/technicalSkillsPopover"
-import FocusAreasPopover from "./ui/focusAreasPopover";
-
+import TechnicalSkillsPopover from "./ui/popovers/technicalSkillsPopover"
+import FocusAreasPopover from "./ui/popovers/focusAreasPopover";
+import InterestsPopover from "./ui/popovers/interestsPopover";
+import EducationPopover from "./ui/popovers/educationPopover";
 
 export default function Home() {
   return (
@@ -27,6 +28,8 @@ export default function Home() {
           <CardBody>
             <TechnicalSkillsPopover/>
             <FocusAreasPopover/>
+            <InterestsPopover/>
+            <EducationPopover/>
           </CardBody>
         </Card>
         <Card className="col-span-4">

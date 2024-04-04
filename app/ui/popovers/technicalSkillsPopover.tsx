@@ -9,8 +9,8 @@ export default function TechnicalSkillsPopover() {
             </PopoverTrigger>
             <PopoverContent>
                 <div className="px-1 py-2">
-                    <div className="text-small font-bold">Technical Skills</div>
-                    <div className="text-tiny"><ul>
+                    <div className="text-base font-bold">Technical Skills</div>
+                    <div className="text-sm"><ul>
                         <li>• Data-Intensive Applications</li>
                         <li>• Frontend Development</li>
                         <li>• Backend Development</li>
