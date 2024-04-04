@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import {Providers} from "./providers";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Input, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar} from "@nextui-org/react";
+import { Providers } from "./providers";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Input, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar } from "@nextui-org/react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,32 +17,57 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className='dark'>
+    <html lang="en" className='light'>
       <body>
-      <header>
-      <Navbar isBordered>
-      <NavbarContent>
-        <NavbarContent data-justify="center">
-          <NavbarItem>
-            <Link color="foreground" href="#">
-              Features
-            </Link>
-          </NavbarItem>
-          <NavbarItem isActive>
-            <Link href="#" aria-current="page" color="secondary">
-              Customers
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link color="foreground" href="#">
-              Integrations
-            </Link>
-          </NavbarItem>
-        </NavbarContent>
-      </NavbarContent>
-      </Navbar>
-      </header>
         <Providers>
+          <header>
+            <Navbar isBordered classNames={{
+              item: [
+                "flex",
+                "relative",
+                "h-full",
+                "items-center",
+                "data-[active=true]:after:content-['']",
+                "data-[active=true]:after:absolute",
+                "data-[active=true]:after:bottom-0",
+                "data-[active=true]:after:left-0",
+                "data-[active=true]:after:right-0",
+                "data-[active=true]:after:h-[2px]",
+                "data-[active=true]:after:rounded-[2px]",
+                "data-[active=true]:after:bg-secondary",
+              ],
+            }}>
+              <NavbarContent>
+                <NavbarContent style={{ display: 'flex', justifyContent: 'center' }}>
+                  <NavbarItem isActive>
+                    <Link color="secondary" href="#">
+                      Home
+                    </Link>
+                  </NavbarItem>
+                  <NavbarItem >
+                    <Link href="#" aria-current="page" color="foreground">
+                      Blog
+                    </Link>
+                  </NavbarItem>
+                  <NavbarItem>
+                    <Link color="foreground" href="#">
+                      Tags
+                    </Link>
+                  </NavbarItem>
+                  <NavbarItem>
+                    <Link color="foreground" href="#">
+                      Resume
+                    </Link>
+                  </NavbarItem>
+                  <NavbarItem>
+                    <Link color="foreground" href="#">
+                      Contact
+                    </Link>
+                  </NavbarItem>
+                </NavbarContent>
+              </NavbarContent>
+            </Navbar>
+          </header>
           {children}
         </Providers>
       </body>
