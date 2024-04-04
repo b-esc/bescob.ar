@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import {Providers} from "./providers";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Input, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar} from "@nextui-org/react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,6 +19,29 @@ export default function RootLayout({
   return (
     <html lang="en" className='dark'>
       <body>
+      <header>
+      <Navbar isBordered>
+      <NavbarContent>
+        <NavbarContent data-justify="center">
+          <NavbarItem>
+            <Link color="foreground" href="#">
+              Features
+            </Link>
+          </NavbarItem>
+          <NavbarItem isActive>
+            <Link href="#" aria-current="page" color="secondary">
+              Customers
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link color="foreground" href="#">
+              Integrations
+            </Link>
+          </NavbarItem>
+        </NavbarContent>
+      </NavbarContent>
+      </Navbar>
+      </header>
         <Providers>
           {children}
         </Providers>
